@@ -66,6 +66,33 @@
   }
 */
 
+//##################################################
+// REWRITE REACT BEHIND THE SCENES INTO JSX
+//##################################################
+/* 
+  This funny tag syntax is neither a string nor HTML. It is called JSX, and it is a syntax 
+  extension to JavaScript. Just to avoid to write all the time: React.createElement() etc etc.
+  We write JSX so that Babel can do its transpilation from JSX to React.createElement().
+  Babel takes some code and transpiles it to something else adaptable to all the broswers.
+  We can also add functions and event listener, check the alertHandler on the button and how
+  the event listener 'click' is added to the button.
+
+      function App() {
+      const time = new Date().toLocaleDateString()
+      const ButtonStyle = {fontSize: 50, color: 'red'}
+      const alertHandler = () => {
+        alert('you clicked the button, careful')
+      }
+      return (
+        <div>
+          <h1>{time}</h1>
+          <button style={ButtonStyle} onClick{alertHandler}></button>
+        </div>
+      );
+  }
+*/
+
+
 
 
 import logo from './logo.svg';
