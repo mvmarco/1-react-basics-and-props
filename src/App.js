@@ -48,6 +48,9 @@
       React.createElement('button', null, 'click me!!')
     ]))
   }
+
+
+  ReactDOM.render(React.createElement(App), document.querySelector('#root))
   ------------------------------------------------------------------------------------------------
   to make it more interesting we could add variables and replace the text of an H1 for instance.
   just to show that you can create elements and adding JS functionalities attached to it.
@@ -64,6 +67,8 @@
         React.createElement('button', null, 'click me!!')
       ]))
   }
+
+  ReactDOM.render(React.createElement(App), document.querySelector('#root))
 */
 
 //##################################################
@@ -77,7 +82,7 @@
   We can also add functions and event listener, check the alertHandler on the button and how
   the event listener 'click' is added to the button.
 
-      function App() {
+    function App() {
       const time = new Date().toLocaleDateString()
       const ButtonStyle = {fontSize: 50, color: 'red'}
       const alertHandler = () => {
@@ -89,7 +94,9 @@
           <button style={ButtonStyle} onClick{alertHandler}></button>
         </div>
       );
-  }
+    }
+
+  ReactDOM.render(React.createElement(App), document.querySelector('#root))
 */
 
 //##################################################
@@ -108,7 +115,50 @@
   This function is a valid React component because it accepts a single “props” 
   object argument (which stands for properties) with data and returns a React element.
   We call such components “function components” because they are literally JavaScript functions.
+  If we take the function we just created we can basically re-used it in any other React 
+  projects. Which is cool. We could add to our function App() another element like a <nav></nav>
+  or more, but then it will get longer and longer. So it is better to create a new component
+  or function. That makes React beautiful because you can re-use components and create new ones.
+  Here below we create a function Tweet() that will return some JSX. We want to only show to
+  the browser (using ReactDOM), the APP which is the main project, which is inside the 
+  function App. So to add a new component to it, we pass to the main <div> inside the 
+  App function, another tag with the name of the new componentm which represent tweet function:
+  <Tweet/> ***** so we just put in the ReactDOM, the App function. It is a way to stacking
+  multiple components. 
+  
+  In the same way we can restructure it the following:
+  ReactDOM.render(React.createElement(App), document.querySelector('#root)
+  with: ReactDOM.render(<App/>, document.querySelector('#root)
+  check down under.
 
+
+
+    function App() {
+      const time = new Date().toLocaleDateString()
+      const ButtonStyle = {fontSize: 50, color: 'red'}
+      const alertHandler = () => {
+        alert('you clicked the button, careful')
+      }
+      return (
+        <div>
+          <h1>{time}</h1>
+          <button style={ButtonStyle} onClick{alertHandler}></button>
+          <Tweet/> *****
+        </div>
+      );
+    }
+
+    function Tweet() {
+      return (
+        <div>
+          <h2>Tweet</h2>
+          <p>This is the tweet content</p>
+        </div>
+      );
+    }
+  
+
+  ReactDOM.render(<App/>, document.querySelector('#root)
 */
 
 
