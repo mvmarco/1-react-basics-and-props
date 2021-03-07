@@ -124,7 +124,8 @@
   function App. So to add a new component to it, we pass to the main <div> inside the 
   App function, another tag with the name of the new componentm which represent tweet function:
   <Tweet/> ***** so we just put in the ReactDOM, the App function. It is a way to stacking
-  multiple components. 
+  multiple components. All the time you work on a project, each file will have its own component
+  so you just import and export pieces of code. And it is easy to work with people.
   
   In the same way we can restructure it the following:
   ReactDOM.render(React.createElement(App), document.querySelector('#root)
