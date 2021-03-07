@@ -105,6 +105,10 @@
     return <h1>Hello, {props.name}</h1>;
   }
 
+  This function is a valid React component because it accepts a single “props” 
+  object argument (which stands for properties) with data and returns a React element.
+  We call such components “function components” because they are literally JavaScript functions.
+
 */
 
 
