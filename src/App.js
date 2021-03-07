@@ -162,7 +162,30 @@
   ReactDOM.render(<App/>, document.querySelector('#root)
 */
 
+//##################################################
+// SETUP
+//##################################################
 
+/* 
+  Important to notice, React is a dependency in the package.json which is needed to let
+  the application works or run. Also React comes from NPM, node package manager, allows us
+  to download different libraries or packages in your project.
+
+  To start you go here, create a new React app: 
+  https://create-react-app.dev/docs/getting-started/
+  there you find the commands to initiate the React boilerplate as follow:
+  1a. npx create-react-app APP-NAME  (app name should be without space or weird stuff
+     this create a folder called with the APP-NAME)
+  1b. you could also do as alternative to the above: npx create-react-app .
+     this will create a react app but inside the current folder you are in, without an
+     additional folder named as above (APP-NAME)
+  2. cd my-app (in case of 1a)
+  3. npm start
+
+  We don’t need to install or configure tools like webpack or Babel. 
+  They are preconfigured and hidden so that we can focus on the code.
+
+*/
 import logo from './logo.svg';
 import './App.css';
 // test 
