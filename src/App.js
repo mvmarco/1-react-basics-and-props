@@ -352,18 +352,39 @@
   can be any name we want and has to be referred as the key of the props object. While the
   value, if it is a variable has to be inside {}. 
 
+  Important: if you pass a variable inside the Tweet function, it is not gonna work inside
+  of itself because data are passed from the parent (App) to the child (Tweet).
+  App is rendering data to Tweet. But in case we add the TweetList component between
+  App and Tweet, that holds all the tweet. Even there, the data will no pass directly
+  from App to Tweet, but instead from the direct parent (TweetList) to the direct child (Tweet)
+
+  import './App.css';
+  import Tweet from './components/Tweet.js'
+  import CreateTweet from './components/CreateTweet.js'
+
+  function App() {
+    const name = 'Marco'
+    const message = 'I really like my dog';
+    return (
+      <div>
+        <h1>Hello React</h1>
+        <CreateTweet />
+        <Tweet name={name} status='Active' message={message}/>
+      </div>
+    );
+  }
+
+export default App;
 */
 import './App.css';
-import Tweet from './components/Tweet.js'
+import TweetList from './components/TweetList.js'
 import CreateTweet from './components/CreateTweet.js'
 function App() {
-  const name = 'Marco'
-  const message = 'I really like my dog';
   return (
     <div>
       <h1>Hello React</h1>
       <CreateTweet />
-      <Tweet name={name} status='Active' message={message}/>
+      <TweetList />
     </div>
   );
 }
