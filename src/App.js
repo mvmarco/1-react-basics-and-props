@@ -256,8 +256,11 @@
   looks like a JSX mentioned above. But You can get rid of the header, classes 
   or importing the logo.
   Here commented there is the original.
+*/
+import logo from './logo.svg';
+import './App.css';
 
-  function App() {
+function App() {
   return (
     <div className="App">
       <header className="App-header">
@@ -278,8 +281,7 @@
   );
 }
 
-*/
-
+export default App;
 
 //##################################################
 // CLASS OR CLASSNAME / FOR OR HTMLFOR
@@ -325,9 +327,16 @@
   to pre-compile JSX code, like in HTML, go to the bottom right, click JavaScript and select
   in the search bar: JavaScript React.
 
-  If you want this for every JS file, go to the settins.json and add:
+  If you want this for every JS file, go to the settings.json (you have before to 
+  click the icon settings, and then click the weird icon on the top right, that has
+  two circle and two arrow forming a rettangular sort of shape) and add:
 
   "file.associations":{
     "*.js": "javascriptreact"
   }
 */
+
+
+//#######################################################################
+// FOR FURTHER NOTES ABOUT THE CORE CONCEPTS CHECK THE COMPONENTS FOLDER
+//#######################################################################
