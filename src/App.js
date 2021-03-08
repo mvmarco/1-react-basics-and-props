@@ -240,16 +240,24 @@
   in fact if you open the "package.json" we have under "scripts":
   1. start: which refers to the npm start, that display stuff on the screen. in other words,
             opens our "developement environment"
-  2. build: then when you want to put it on the internet you run "npm build" which refers to
-            to the build script in the package.json
-
-
-
+  2. build: then when you want to put it on the internet you run "npm run build" which refers to
+            to the build script in the package.json. what this will do is to build all of our JS 
+            files and create some "dist" folders. Which are basically compiled, minified, compressed 
+            versions of our project files. All the time you change a file, the dist will be updated
+            after you run "npm run build"
 */
-import logo from './logo.svg';
-import './App.css';
-// test 
-function App() {
+
+
+//##################################################
+// TAKING A LOOK ON THE APP.JS
+//##################################################
+
+/* 
+  looks like a JSX mentioned above. But You can get rid of the header, classes 
+  or importing the logo.
+  Here commented there is the original.
+
+  function App() {
   return (
     <div className="App">
       <header className="App-header">
@@ -266,6 +274,27 @@ function App() {
           Learn React
         </a>
       </header>
+    </div>
+  );
+}
+
+*/
+
+
+//##################################################
+// CLASS OR CLASSNAME
+//##################################################
+
+/* 
+  we gotta mention the file "serviceWorker.js" present in 
+*/
+
+import './App.css';
+
+function App() {
+  return (
+    <div>
+      <h1>Hello React</h1>
     </div>
   );
 }
