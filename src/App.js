@@ -309,7 +309,8 @@
   import React from 'react';
 
   In Index.js, we have imported React and React-dom and as well as out app.js
-  so here we do not need it. But here we need to export it, so index.js can read it. this with:
+  so here we do not need it. But here we need to export it, so index.js can read it.
+  and then render it in the dom. This is possible because of this export here:
 
   export default App;
 
