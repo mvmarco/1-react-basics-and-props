@@ -174,6 +174,12 @@
   To start you go here, create a new React app: 
   https://create-react-app.dev/docs/getting-started/
   there you find the commands to initiate the React boilerplate as follow:
+  1 IMPORTANT REACT DOC RECcOMMEND TO USE NPM OVER YARN with:
+    npx create-react-app my-app --use-npm
+    this will create a package-lock.json
+    if you do not do that sometimes it will create a yarn.lock which essentially
+    it is the same. 
+
   1a. npx create-react-app APP-NAME  (app name should be without space or weird stuff
      this create a folder called with the APP-NAME)
   1b. you could also do as alternative to the above: npx create-react-app .
@@ -184,6 +190,60 @@
 
   We don’t need to install or configure tools like webpack or Babel. 
   They are preconfigured and hidden so that we can focus on the code.
+  ---------------------------------------------------------------------------------------------
+  After creation, your project should look like this:
+
+              my-app/
+                README.md
+                node_modules/
+                package.json     (show info about the current project we are working on)
+                public/
+                  index.html
+                  favicon.ico
+              src/
+                App.css
+                App.js
+                App.test.js
+                index.css
+                index.js
+                logo.svg
+
+  For the project to build, these files must exist with exact filenames:
+
+  1. public/index.html is the page template; it is where there is the root div with id #root
+     where you inject your React application
+  2. src/index.js is the JavaScript entry point. (in src folder you ad also your CSS and
+     React components)
+
+     You may create subdirectories inside src. For faster rebuilds, only files inside src
+     are processed by webpack. You need to put any JS and CSS files inside src, otherwise
+     webpack won’t see them.
+
+  another thing, if the package-lock.json is missing you gotta do: npm i
+  package-lock.json is essentially a file that remain locked with all the info of your project
+  in a way that if someone in the future works on the same project, that person will have
+  the same setup as you. Avoiding to update or dowgrade the versions etc etc. 
+  by default when installing a React app sometiems you get a yarn.lock which is essentially
+  the same. Just to be sure use: npx create-react-app my-app --use-npm
+
+  And having yarn.lock and package-lock.json creates conflicts. So avoid that.
+  Another file created with the React app is the ".gitignore" which essentially collects and
+  ignores all the files and folder in your project that you do not want to upload/push on github.
+  For instance the "node_modules", which collects all the packages that you are using by 
+  dowloading/using npm. And it is really large, so you don't want to push it on github
+  so it goes in a folder called .gitignore 
+  ---------------------------------------------------------------------------------------------
+  Now in order to see the App on the screen you gotta run:
+  npm start
+  "npm start" it will take all the code that we wrote in src and display it on the screen
+
+  in fact if you open the "package.json" we have under "scripts":
+  1. start: which refers to the npm start, that display stuff on the screen. in other words,
+            opens our "developement environment"
+  2. build: then when you want to put it on the internet you run "npm build" which refers to
+            to the build script in the package.json
+
+
 
 */
 import logo from './logo.svg';
