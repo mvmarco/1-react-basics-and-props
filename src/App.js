@@ -315,3 +315,19 @@
   export default App;
 
 */
+
+
+//##################################################
+// EXTENTIONS
+//##################################################
+
+/* 
+  to pre-compile JSX code, like in HTML, go to the bottom right, click JavaScript and select
+  in the search bar: JavaScript React.
+
+  If you want this for every JS file, go to the settins.json and add:
+
+  "file.associations":{
+    "*.js": "javascriptreact"
+  }
+*/
