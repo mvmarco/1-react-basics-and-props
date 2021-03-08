@@ -356,7 +356,7 @@
   of itself because data are passed from the parent (App) to the child (Tweet).
   App is rendering data to Tweet. But in case we add the TweetList component between
   App and Tweet, that holds all the tweet. Even there, the data will no pass directly
-  from App to Tweet, but instead from the direct parent (TweetList) to the direct child (Tweet)
+  from App to Tweet, but instead from the direct parent (TweetList) to the direct child (Tweet).
 
   import './App.css';
   import Tweet from './components/Tweet.js'
