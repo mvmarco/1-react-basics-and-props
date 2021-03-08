@@ -256,32 +256,33 @@
   looks like a JSX mentioned above. But You can get rid of the header, classes 
   or importing the logo.
   Here commented there is the original.
+
+  import logo from './logo.svg';
+  import './App.css';
+  
+  function App() {
+    return (
+      <div className="App">
+        <header className="App-header">
+          <img src={logo} className="App-logo" alt="logo" />
+          <p>
+            Edit <code>src/App.js</code> and save to reload.
+          </p>
+          <a
+            className="App-link"
+            href="https://reactjs.org"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Learn React
+          </a>
+        </header>
+      </div>
+    );
+  }
+  
+  export default App;
 */
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
-
-export default App;
 
 //##################################################
 // CLASS OR CLASSNAME / FOR OR HTMLFOR
@@ -340,3 +341,31 @@ export default App;
 //#######################################################################
 // FOR FURTHER NOTES ABOUT THE CORE CONCEPTS CHECK THE COMPONENTS FOLDER
 //#######################################################################
+
+/* 
+  PROPS: “Props” is a special keyword in React, which stands for properties and 
+  is being used for passing data from one component to another. But the important part
+  here is that data with props are being passed in a uni-directional flow.
+  example: our tweet component has a props argument, which essentially is an
+  object where stores data that we pass inside the child component such as
+  <Tweet author={username} age=100 /> EXAMPLE. so the description in the child component,
+  can be any name we want and has to be referred as the key of the props object. While the
+  value, if it is a variable has to be inside {}. 
+
+*/
+import './App.css';
+import Tweet from './components/Tweet.js'
+import CreateTweet from './components/CreateTweet.js'
+function App() {
+  const name = 'Marco'
+  const message = 'I really like my dog';
+  return (
+    <div>
+      <h1>Hello React</h1>
+      <CreateTweet />
+      <Tweet name={name} status='Active' message={message}/>
+    </div>
+  );
+}
+
+export default App;
