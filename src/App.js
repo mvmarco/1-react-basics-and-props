@@ -282,21 +282,35 @@
 
 
 //##################################################
-// CLASS OR CLASSNAME
+// CLASS OR CLASSNAME / FOR OR HTMLFOR
+//##################################################
+
+
+/* 
+  in order to add classes (for elements) in React, which still is JSX, we cannot do:
+  class="test" but instead you gotta do className="test", even though they work
+  the reason is that with React you can create proper classes such as
+
+  class Human{} (example)
+
+  also for instance when you use the "for" in a tag element you gotta need to use
+  the htmlfor so you don't confuse it with the for(){}
+*/
+
+//##################################################
+// IMPORT AND EXPORT
 //##################################################
 
 /* 
-  we gotta mention the file "serviceWorker.js" present in 
+  since we are using "webpack" we can create our components in different files.
+  All the time you want to use a package, you gotta import it from the library.
+  such as:
+  
+  import React from 'react';
+
+  In Index.js, we have imported React and React-dom and as well as out app.js
+  so here we do not need it. But here we need to export it, so index.js can read it. this with:
+
+  export default App;
+
 */
-
-import './App.css';
-
-function App() {
-  return (
-    <div>
-      <h1>Hello React</h1>
-    </div>
-  );
-}
-
-export default App;
