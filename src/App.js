@@ -338,9 +338,9 @@
 */
 
 
-//#######################################################################
-// FOR FURTHER NOTES ABOUT THE CORE CONCEPTS CHECK THE COMPONENTS FOLDER
-//#######################################################################
+//############################################################################################
+// FOR FURTHER NOTES ABOUT THE 1st CORE CONCEPT: PROPS: CHECK THE COMPONENTS FOLDER: TWEET
+//############################################################################################
 
 /* 
   PROPS: “Props” is a special keyword in React, which stands for properties and 
