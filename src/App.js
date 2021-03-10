@@ -348,7 +348,8 @@
   here is that data with props are being passed in a uni-directional flow.
   example: our tweet component has a props argument, which essentially is an
   object where stores data that we pass inside the child component such as
-  <Tweet author={username} age=100 /> EXAMPLE. so the description in the child component,
+  <Tweet author={username} age=100 /> in App.js (the mother) 
+  EXAMPLE. so the description in the child component, like "author",
   can be any name we want and has to be referred as the key of the props object. While the
   value, if it is a variable has to be inside {}. 
 
@@ -375,6 +376,9 @@
   }
 
 export default App;
+
+
+WE CREATED "TweetList.js" as the father component of the "Tweet.js"
 */
 import './App.css';
 import TweetList from './components/TweetList.js'
